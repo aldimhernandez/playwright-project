@@ -8,7 +8,7 @@ import { test, Browser, Page, expect } from '@playwright/test';
     let page: Page;
 
     test.describe('Navegación en www.freerangetesters.com', () => {
-        test('Los links principales redirigen correctamente', async ({ page }) => {
+        test.skip('Los links principales redirigen correctamente', async ({ page }) => {
             await test.step('Estando yo en la web principal www.freerangetesters.com', async () => {
                 page.goto('https://www.freerangetesters.com/');
             })

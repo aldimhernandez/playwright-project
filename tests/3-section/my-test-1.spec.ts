@@ -6,7 +6,7 @@ import { expect, test } from '@playwright/test';
  * @see https://playwright.dev/docs/writing-tests
  */
 test.describe('Navegación en www.freerangetesters.com', () => {
-    test('Los links principales redirigen correctamente', async ({ page }) => {
+    test('El link de Cursos funciona correctamente', async ({ page }) => {
         await test.step('Estando yo en la web principal www.freerangetesters.com', async () => {
             await page.goto('https://www.freerangetesters.com/');
         });
