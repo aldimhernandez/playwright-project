@@ -38,15 +38,15 @@ npx playwright test --ui
 
 # Contenido del Curso
 
-- Introducción a E2E Testing, beneficios y desafíos.
-- Instalación de nvm, node, ts, playwright y extensiones para vs code
-- Breve repaso de TypeScript: Tipo de datos, funciones, clases, asincronía
-- Arquitectura y componentes de Playwright
-- Selectores mas recomendados, menos recomendados y estrategias de selección
-- Interacción con elementos del DOM
-- Validaciones
-- Ejecución y control de pruebas (skip, only, etc)
-- APIs
+- Introducción a E2E Testing, beneficios y desafíos. ✅
+- Instalación de nvm, node, ts, playwright y extensiones para vs code. ✅
+- Breve repaso de TypeScript: Tipo de datos, funciones, clases, asincronía. ✅
+- Arquitectura y componentes de Playwright. ✅
+- Selectores mas recomendados, menos recomendados y estrategias de selección. ✅
+- Interacción con elementos del DOM. ✅
+- Validaciones. ✅
+- Ejecución y control de pruebas (skip, only, etc). ✅
+- APIs. ✅
 - Mocks
 - Page Object Model
 - Reportes
@@ -54,6 +54,6 @@ npx playwright test --ui
 
 # Progreso
 
-Mi progreso actual es: 33 de 80 lecciones completadas
+Mi progreso actual es: 71 de 80 lecciones completadas
 
-# Link del curso: https://www.udemy.com/course/dominando-playwright-con-typescript-e2e-testing-moderno
+- Link del curso: https://www.udemy.com/course/dominando-playwright-con-typescript-e2e-testing-moderno
