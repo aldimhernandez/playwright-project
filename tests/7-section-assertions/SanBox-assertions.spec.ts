@@ -44,7 +44,7 @@ test.describe('Acciones del Automation SandBox', () => {
         await expect(page.getByLabel('No'), 'El radio button no fue seleccionado').toBeChecked();
     });
 
-    test.fixme('Selecciono un item de un falso dropdown de "Deportes"', async ({ page }) => {
+    test('Selecciono un item de un falso dropdown de "Deportes"', async ({ page }) => {
         await test.step('Valido que todas las opciones estén disponibles', async () => {
             /**
              * * No funciona debido a que el elemento <select> no tiene el atributo 'multiple'.
