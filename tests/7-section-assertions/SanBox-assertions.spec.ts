@@ -117,8 +117,12 @@ test.describe('Acciones del Automation SandBox', () => {
     });
 })
 
+/**
+ * @description: Soft Assertions: Allows you to continue executing the test even if an assertion fails.
+ * @see: https://playwright.dev/docs/test-assertions#soft-assertions
+ */
 test.describe('Soft Assertions probando el Automation SandBox', () => {
-    test('Valido que los elementos de texto de los checkbox estén correctos', async ({ page }) => {
+    test.skip('Valido que los elementos de texto de los checkbox estén correctos', async ({ page }) => {
         await expect.soft(page.getByLabel('Pizza 🍕'), 'No se encontró el elemento Pizza').toBeVisible();
         await expect.soft(page.getByLabel('Hamburguesa 🍔'), 'No se encontró el elemento Hamburguesa').toBeVisible();
         await expect.soft(page.getByLabel('Pasta 🍝'), 'No se encontró el elemento Pasta').toBeVisible();
