@@ -24,6 +24,49 @@ cd tu-repo-playwright
 
 npm install
 
+# Configuración para pruebas de APIs
+
+Para ejecutar las pruebas de APIs localmente, es necesario configurar un archivo `.env` con tu token de acceso personal de GitHub. Este token se utiliza para autenticar las solicitudes a la API de GitHub.
+
+## Pasos para configurar el entorno:
+
+1. **Crear un token de acceso personal en GitHub**:
+
+   - Ve a [GitHub Developer Settings](https://github.com/settings/tokens).
+   - Haz clic en **Generate new token**.
+   - Selecciona los permisos necesarios:
+     - `repo` (para repositorios privados).
+     - `public_repo` (para repositorios públicos).
+   - Copia el token generado.
+
+2. **Crear un archivo `.env` en la raíz del proyecto**:
+
+   - En la raíz del proyecto, crea un archivo llamado `.env`
+   - Agrega el siguiente contenido al archivo `.env`:
+
+     ```env
+     API_TOKEN=tu-token-de-github
+     ```
+
+3. **Actualiza los datos de usuario y repositorio**:
+
+   - En los archivos de test/9-section-apis se encuentran las constantes REPO y USER
+   - Cámbialas por las tuyas
+
+4. **Ejecutar las pruebas de APIs**:
+   - Usa el siguiente comando para ejecutar las pruebas relacionadas con APIs:
+     ```bash
+     npx playwright test --project="API Tests"
+     ```
+
+## Notas importantes:
+
+- **Seguridad**: Nunca compartas tu token de acceso personal ni lo subas a un repositorio público.
+- **Permisos**: Asegúrate de que el token tenga los permisos adecuados para las acciones que deseas realizar (por ejemplo, crear issues, leer repositorios, etc.).
+- **Depuración**: Si encuentras problemas, verifica que el archivo `.env` esté correctamente configurado y que el token sea válido.
+
+Con esta configuración, podrás ejecutar las pruebas de APIs localmente sin problemas. 🚀
+
 ---
 
 # Correr todas las pruebas
@@ -47,10 +90,10 @@ npx playwright test --ui
 - Validaciones. ✅
 - Ejecución y control de pruebas (skip, only, etc). ✅
 - APIs. ✅
-- Mocks
-- Page Object Model
-- Reportes
-- Mejores practicas
+- Mocks.
+- Page Object Model. ✅
+- Reportes. ✅
+- Mejores practicas.
 
 # 🚀 Investigación por mi cuenta
 
@@ -65,7 +108,7 @@ npx playwright test --ui
 
 # Progreso
 
-Mi progreso actual es: 71 de 80 lecciones completadas
+Mi progreso actual es: 73 de 80 lecciones completadas
 
 # Link del curso:
 
