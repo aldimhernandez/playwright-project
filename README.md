@@ -90,7 +90,7 @@ npx playwright test --ui
 - Validaciones. ✅
 - Ejecución y control de pruebas (skip, only, etc). ✅
 - APIs. ✅
-- Mocks.
+- Mocks. ✅
 - Page Object Model. ✅
   - Implementado en tests\6-section-actions\SandBox-actions.spec.ts
 - Reportes. ✅
@@ -109,7 +109,7 @@ npx playwright test --ui
 
 ## Progreso
 
-Mi progreso actual es: 73 de 80 lecciones completadas
+Mi progreso actual es: 77 de 80 lecciones completadas
 
 ## Link del curso:
 
