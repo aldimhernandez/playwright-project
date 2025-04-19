@@ -52,6 +52,17 @@ npx playwright test --ui
 - Reportes
 - Mejores practicas
 
+# 🚀 Investigación por mi cuenta
+
+- Fixtures: https://playwright.dev/docs/test-fixtures
+  - Mientras trabajaba en la sección de **Page Object Model (POM)**, me encontré con el desafío de tener que instanciar la clase varias veces para usarla en cada prueba.
+    Esto me llevó a investigar cómo mejorar este proceso.
+  - Gracias a Copilot y la documentación oficial de Playwright, pude comprender cómo usar los **fixtures** e implementarlos de manera efectiva.
+  - Al crear un fixture personalizado para `sandboxPage`, logré:
+    - Proveer automáticamente una instancia de la clase `SandboxPage` a todas las pruebas.
+    - Simplificar la configuración de las pruebas centralizando la lógica de navegación e interacción con elementos.
+    - Mejorar la reutilización y el mantenimiento del código.
+
 # Progreso
 
 Mi progreso actual es: 71 de 80 lecciones completadas
