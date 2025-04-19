@@ -56,4 +56,6 @@ npx playwright test --ui
 
 Mi progreso actual es: 71 de 80 lecciones completadas
 
-- Link del curso: https://www.udemy.com/course/dominando-playwright-con-typescript-e2e-testing-moderno
+# Link del curso:
+
+https://www.udemy.com/course/dominando-playwright-con-typescript-e2e-testing-moderno
