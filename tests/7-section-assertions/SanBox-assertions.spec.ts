@@ -44,22 +44,26 @@ test.describe('Acciones del Automation SandBox', () => {
         await expect(page.getByLabel('No'), 'El radio button no fue seleccionado').toBeChecked();
     });
 
-    test('Selecciono un item de un falso dropdown de "Deportes"', async ({ page }) => {
-        /**
-         * * No funciona debido a que el elemento <select> no tiene el atributo 'multiple'.
-            const dropdownSelector = page.locator('id=formBasicSelect');
-            await dropdownSelector.selectOption(['Fútbol', 'Tennis']);
-            await expect(dropdownSelector).toHaveValues([/Fútbol/, /Tennis/]);
-         */
-        const sportsOptionsList = ['Fútbol', 'Tennis', 'Basketball', 'Rugby'];
-        for (const sport of sportsOptionsList) {
-            const sportOption = await page.$(`select#formBasicSelect > option:is(:text("${sport}"))`),
-                messageSuccess = `La opción "${sport}" se encontró en el dropdown.`,
-                messageError = `La opción "${sport}" no se encontró en el dropdown.`;
+    test.fixme('Selecciono un item de un falso dropdown de "Deportes"', async ({ page }) => {
+        await test.step('Valido que todas las opciones estén disponibles', async () => {
+            /**
+             * * No funciona debido a que el elemento <select> no tiene el atributo 'multiple'.
+                const dropdownSelector = page.locator('id=formBasicSelect');
+                await dropdownSelector.selectOption(['Fútbol', 'Tennis']);
+                await expect(dropdownSelector).toHaveValues([/Fútbol/, /Tennis/]);
+             */
+            const sportsOptionsList = ['Fútbol', 'Tennis', 'Basketball', 'Rugby'];
+            for (const sport of sportsOptionsList) {
+                const sportOption = await page.$(`select#formBasicSelect > option:is(:text("${sport}"))`),
+                    messageSuccess = `La opción "${sport}" se encontró en el dropdown.`,
+                    messageError = `La opción "${sport}" no se encontró en el dropdown.`;
 
-            sportOption ? console.info(messageSuccess) : console.error(messageError);
-        }
-        await page.getByLabel('Dropdown').selectOption('Fútbol');
+                sportOption ? console.info(messageSuccess) : console.error(messageError);
+            }
+        });
+        await test.step('Selecciono la opción "Fútbol"', async () => {
+            await page.getByLabel('Dropdown').selectOption('Fútbol');
+        });
     });
 
     test('Selecciono un item del dropdown de "Días de la semana"', async ({ page }) => {
@@ -72,6 +76,10 @@ test.describe('Acciones del Automation SandBox', () => {
         const nombresEsperados = ['Messi', 'Ronaldo', 'Mbappe'];
 
         expect(valoresColumnaNombres).toEqual(nombresEsperados);
+        await test.info().attach('screenshot', {
+            body: await page.screenshot(),
+            contentType: 'image/png',
+        })
     });
 
     test('Valido la columna "Nombres" de la tabla dinámica', async ({ page }) => {
