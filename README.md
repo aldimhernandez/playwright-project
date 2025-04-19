@@ -86,6 +86,7 @@ npx playwright test --ui
 - Breve repaso de TypeScript: Tipo de datos, funciones, clases, asincronía. ✅
 - Arquitectura y componentes de Playwright. ✅
 - Selectores mas recomendados, menos recomendados y estrategias de selección. ✅
+- Generación automática de scripts con playwright record o codegen. ✅
 - Interacción con elementos del DOM. ✅
 - Validaciones. ✅
 - Ejecución y control de pruebas (skip, only, etc). ✅
@@ -94,7 +95,7 @@ npx playwright test --ui
 - Page Object Model. ✅
   - Implementado en tests\6-section-actions\SandBox-actions.spec.ts
 - Reportes. ✅
-- Mejores practicas.
+- Mejores practicas. ✅
 
 ## 🚀 Investigación por mi cuenta
 
@@ -107,10 +108,14 @@ npx playwright test --ui
     - Simplificar la configuración de las pruebas centralizando la lógica de navegación e interacción con elementos.
     - Mejorar la reutilización y el mantenimiento del código.
 
-## Progreso
+## Progreso 🎉
 
-Mi progreso actual es: 77 de 80 lecciones completadas
+Mi progreso actual es: 80 de 80 lecciones completadas
 
-## Link del curso:
+## Link Curso:
 
 https://www.udemy.com/course/dominando-playwright-con-typescript-e2e-testing-moderno
+
+## 🏆 Link Certificado:
+
+https://www.udemy.com/certificate/UC-653a971b-6ee8-45e0-98d2-4b0a642c188d
