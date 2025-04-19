@@ -1,46 +1,46 @@
-import { test } from '@playwright/test';
+import { test } from "../../pages/sandbox/sandbox-fixture";
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async ({ sandboxPage }) => {
     await test.step('Navega hasta el sandbox de The Free Range Testers', async () => {
-        await page.goto('https://thefreerangetester.github.io/sandbox-automation-testing/');
+        await sandboxPage.goTo();
     });
 });
 
+/**
+ * Another examples of clicks actions:
+ * https://playwright.dev/docs/api/class-locator#locator-click
+ * .click() - Clicks the element.
+ * .dblclick() - Double clicks the element.
+ * .click({ button: 'right' }) - Right clicks the element.
+ * .click({ modifiers: ['Shift'] }) - Holds down Shift while clicking the element.
+ * .click({ force: true }) - Clicks the element even if it is not visible.
+ * .hover() - Hovers over the element.
+ */
 test.describe('Acciones del Automation SandBox', () => {
-    test('Click en el botón con ID dinámico', async ({ page }) => {
+    test('Click en el botón con ID dinámico', async ({ sandboxPage }) => {
         await test.step('Hace click en el botón con ID dinámico', async () => {
-            const dynamicButtonID = page.getByRole('button', { name: 'Hacé click para generar un ID dinámico y mostrar el elemento oculto' });
-            await dynamicButtonID.click();
-            //* Otros métodos para interactuar con el botón:
-            //* await dynamicButtonID.click({force: true});
-            //* await dynamicButtonID.dblclick();
-            //* await dynamicButtonID.click({ button: 'right' });
-            //* await dynamicButtonID.click({modifiers: ['Shift']});
-            //* await dynamicButtonID.hover();
+            await sandboxPage.clickDynamicButton();
         });
     });
 
-    test('Lleno un campo de texto en Automation SandBox', async ({ page }) => {
-        await page.getByPlaceholder('Ingresá texto').fill('Hola mundo con Playwright');
+    test('Lleno un campo de texto en Automation SandBox', async ({ sandboxPage }) => {
+        await sandboxPage.fillInputText('Hola mundo con Playwright!');
     });
 
-    test('Selecciono un checkbox', async ({ page }) => {
-        await page.getByLabel('Pasta 🍝').check();
-        await page.getByLabel('Pasta 🍝').uncheck();
-        await page.getByLabel('Pasta 🍝').check();
+    test('Selecciono un checkbox', async ({ sandboxPage }) => {
+        await sandboxPage.checkPastaCheckbox();
     });
 
-    test('Selecciono un radio button para No', async ({ page }) => {
-        await page.getByLabel('No').check();
+    test('Selecciono un radio button para No', async ({ sandboxPage }) => {
+        await sandboxPage.checkNoRadioButton();
     });
 
-    test('Selecciono un item del dropdown "Deportes"', async ({ page }) => {
-        await page.getByLabel('Dropdown').selectOption('Fútbol');
+    test('Selecciono un item del dropdown "Deportes"', async ({ sandboxPage }) => {
+        await sandboxPage.selectSports('Fútbol');
     });
 
-    test('Selecciono un item del dropdown de "Días de la semana"', async ({ page }) => {
-        await page.getByRole('button', { name: 'Día de la semana' }).click();
-        await page.getByRole('link', { name: 'Martes' }).click();
+    test('Selecciono un item del dropdown de "Días de la semana"', async ({ sandboxPage }) => {
+        await sandboxPage.selectDayOfWeek('Martes');
     });
 
     test.skip('Sube varios archivos', async ({ page }) => {
