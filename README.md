@@ -20,11 +20,11 @@ git clone https://github.com/tu-usuario/tu-repo-playwright.git
 cd tu-repo-playwright
 ```
 
-# Instalar dependencias
+## Instalar dependencias
 
 npm install
 
-# Configuración para pruebas de APIs
+## Configuración para pruebas de APIs
 
 Para ejecutar las pruebas de APIs localmente, es necesario configurar un archivo `.env` con tu token de acceso personal de GitHub. Este token se utiliza para autenticar las solicitudes a la API de GitHub.
 
@@ -69,17 +69,17 @@ Con esta configuración, podrás ejecutar las pruebas de APIs localmente sin pro
 
 ---
 
-# Correr todas las pruebas
+## Correr todas las pruebas
 
 npx playwright test
 
-# Abrir el modo UI (recomendado para debugging)
+## Abrir el modo UI (recomendado para debugging)
 
 npx playwright test --ui
 
 ---
 
-# Contenido del Curso
+## Contenido del Curso
 
 - Introducción a E2E Testing, beneficios y desafíos. ✅
 - Instalación de nvm, node, ts, playwright y extensiones para vs code. ✅
@@ -92,13 +92,14 @@ npx playwright test --ui
 - APIs. ✅
 - Mocks.
 - Page Object Model. ✅
+  - Implementado en tests\6-section-actions\SandBox-actions.spec.ts
 - Reportes. ✅
 - Mejores practicas.
 
-# 🚀 Investigación por mi cuenta
+## 🚀 Investigación por mi cuenta
 
 - Fixtures: https://playwright.dev/docs/test-fixtures
-  - Mientras trabajaba en la sección de **Page Object Model (POM)**, me encontré con el desafío de tener que instanciar la clase varias veces para usarla en cada prueba.
+  - Mientras trabajaba en la sección de **Page Object Model (POM)**, me encontré con el desafío de tener que crear una instancia de la clase varias veces para usarla en cada prueba.
     Esto me llevó a investigar cómo mejorar este proceso.
   - Gracias a Copilot y la documentación oficial de Playwright, pude comprender cómo usar los **fixtures** e implementarlos de manera efectiva.
   - Al crear un fixture personalizado para `sandboxPage`, logré:
@@ -106,10 +107,10 @@ npx playwright test --ui
     - Simplificar la configuración de las pruebas centralizando la lógica de navegación e interacción con elementos.
     - Mejorar la reutilización y el mantenimiento del código.
 
-# Progreso
+## Progreso
 
 Mi progreso actual es: 73 de 80 lecciones completadas
 
-# Link del curso:
+## Link del curso:
 
 https://www.udemy.com/course/dominando-playwright-con-typescript-e2e-testing-moderno
