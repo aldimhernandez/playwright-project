@@ -35,7 +35,8 @@ export default defineConfig({
       name: 'chromium',
       testMatch: [
         'tests/3-section-arc/**/*.spec.ts',
-        'tests/6-section-actions/**/*.spec.ts'
+        'tests/6-section-actions/**/*.spec.ts',
+        'tests/10-section-mocks/**/*.spec.ts',
       ],
       use: { ...devices['Desktop Chrome'] },
     },
