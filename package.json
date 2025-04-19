@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Este repositorio contiene ejercicios y ejemplos desarrollados mientras completo el curso [Dominando Playwright con TypeScript: E2E Testing Moderno](https://www.udemy.com/course/dominando-playwright-con-typescript-e2e-testing-moderno).",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "ui": "npx playwright test --ui",
+    "report": "npx playwright show-report"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aldimhernandez/playwright-project.git"
