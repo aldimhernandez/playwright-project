@@ -1,6 +1,6 @@
 # 🎭 Playwright + TypeScript - E2E Testing Moderno
 
-Este repositorio contiene ejercicios y ejemplos desarrollados mientras completo el curso [Dominando Playwright con TypeScript: E2E Testing Moderno](https://www.udemy.com/course/dominando-playwright-con-typescript-e2e-testing-moderno).
+Este repositorio contiene ejercicios y ejemplos desarrollados durante el curso [Dominando Playwright con TypeScript: E2E Testing Moderno](https://www.udemy.com/course/dominando-playwright-con-typescript-e2e-testing-moderno).
 
 ---
 
