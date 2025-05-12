@@ -102,7 +102,7 @@ npx playwright test --ui
 - Fixtures: https://playwright.dev/docs/test-fixtures
   - Mientras trabajaba en la sección de **Page Object Model (POM)**, me encontré con el desafío de tener que crear una instancia de la clase varias veces para usarla en cada prueba.
     Esto me llevó a investigar cómo mejorar este proceso.
-  - Gracias a Copilot y la documentación oficial de Playwright, pude comprender cómo usar los **fixtures** e implementarlos de manera efectiva.
+  - Gracias a Copilot y la documentación oficial de Playwright, pude comprender rapidamente cómo usar los **fixtures** e implementarlos de manera efectiva.
   - Al crear un fixture personalizado para `sandboxPage`, logré:
     - Proveer automáticamente una instancia de la clase `SandboxPage` a todas las pruebas.
     - Simplificar la configuración de las pruebas centralizando la lógica de navegación e interacción con elementos.
